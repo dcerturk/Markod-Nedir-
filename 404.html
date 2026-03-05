@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>MarKod - İndirim Detayları</title>
+    
+    <script type="text/javascript">
+        // Mevcut URL'yi alıyoruz (Örn: .../urun/8690504013444)
+        var currentUrl = window.location.href;
+        var playStoreLink = "https://play.google.com/store/apps/details?id=com.cagatayerturk.markod";
+
+        // Eğer kullanıcı uygulamaya sahip değilse ve tarayıcıda kaldıysa
+        // 2 saniye sonra otomatik olarak Play Store'a yönlendir.
+        setTimeout(function() {
+            window.location.href = playStoreLink;
+        }, 2000);
+    </script>
+
+    <style>
+        body { font-family: sans-serif; text-align: center; padding: 50px; background-color: #f4f4f4; }
+        .loader { border: 8px solid #f3f3f3; border-top: 8px solid #3498db; border-radius: 50%; width: 50px; height: 50px; animation: spin 2s linear infinite; margin: 20px auto; }
+        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+    </style>
+</head>
+<body>
+    <h2>MarKod'a Yönlendiriliyorsunuz...</h2>
+    <div class="loader"></div>
+    <p>Eğer uygulama açılmazsa <a href="https://play.google.com/store/apps/details?id=com.cagatayerturk.markod">buraya tıklayarak</a> Play Store'dan indirebilirsiniz.</p>
+</body>
+</html>
